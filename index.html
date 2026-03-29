@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <meta name="description" content="무료 로또 번호 생성기 - 행운의 숫자를 무작위로 생성하고 테마를 변경해 보세요. 제휴 문의 및 댓글 소통이 가능합니다.">
+    <title>로또 번호 생성기 | 행운의 숫자 조합기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button id="theme-toggle">Dark Mode</button>
     <header>
         <h1>Lotto Number Generator</h1>
+        <p>당신의 행운을 시험해 보세요! 간편하게 숫자를 생성합니다.</p>
     </header>
     <main>
-        <div id="lotto-container"></div>
-        <button id="generate-btn">Generate Numbers</button>
+        <section id="generator-section">
+            <div id="lotto-container"></div>
+            <button id="generate-btn">Generate Numbers</button>
+        </section>
+
+        <section id="about-section">
+            <hr>
+            <h2>사이트 소개 (About)</h2>
+            <p>이 서비스는 사용자에게 무작위로 추출된 6개의 로또 번호(1-45)를 제공하는 도구입니다. 복잡한 가입 없이 누구나 무료로 이용할 수 있으며, 사용자 편의를 위해 다크모드 기능을 지원합니다.</p>
+            <h3>사용 방법 (How to Use)</h3>
+            <ul>
+                <li><strong>Generate Numbers</strong> 버튼을 클릭하여 번호를 생성합니다.</li>
+                <li>오른쪽 상단의 버튼으로 다크/라이트 모드를 전환할 수 있습니다.</li>
+                <li>하단의 댓글 창을 통해 다른 사용자들과 행운을 공유해 보세요.</li>
+            </ul>
+        </section>
 
         <section id="contact-section">
             <hr>
@@ -33,21 +49,14 @@
                 </div>
                 <button type="submit" id="submit-btn">문의하기</button>
             </form>
+        </section>
+
         <section id="comments-section">
             <hr>
             <h2>댓글 (Comments)</h2>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://product-builder-test1-1.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
@@ -57,6 +66,11 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
     </main>
+    <footer>
+        <hr>
+        <p>&copy; 2026 Lotto Number Generator. All rights reserved.</p>
+        <p><small>본 사이트는 단순 번호 생성 도구이며 실제 당첨을 보장하지 않습니다. 개인정보 보호정책: 문의 폼을 통해 제출된 이메일은 오직 제휴 답변 목적으로만 사용됩니다.</small></p>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
