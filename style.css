@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4caf50;
+    --ball-background: #f0f0f0;
+    --ball-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --header-color: #4caf50;
+}
+
+[data-theme="dark"] {
     --background-color: #121212;
     --text-color: #ffffff;
     --primary-color: #4caf50;
     --ball-background: #2c2c2c;
     --ball-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    --header-color: #4caf50;
 }
 
 body {
@@ -19,13 +29,33 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
-    color: var(--primary-color);
+    color: var(--header-color);
     font-weight: 600;
     font-size: 2.5rem;
-    text-shadow: 0 0 10px var(--primary-color);
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--ball-background);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: var(--ball-shadow);
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 #lotto-container {
